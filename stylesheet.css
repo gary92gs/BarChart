@@ -1,0 +1,32 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#header {
+  width: 100%;
+  height: 50px; /* Adjust as needed */
+  background-color: #f1f1f1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#sidebar {
+  width: 200px; /* Adjust as needed */
+  height: 100%;
+  background-color: #ddd;
+  position: fixed;
+  top: 50px; /* Same as header height */
+  left: 0;
+  overflow-y: auto;
+}
+
+#chart-container {
+  margin-left: 200px; /* Same as sidebar width */
+  margin-top: 50px; /* Same as header height */
+  padding: 20px;
+  height: calc(100% - 50px); /* Adjust based on header height */
+}
