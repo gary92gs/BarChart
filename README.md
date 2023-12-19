@@ -26,6 +26,6 @@ Display Requirements:
   - Label Colour (x-axis?)
   - Bar Spacing (between each bar)
   - Bar Chart Axes (what does this mean?)
-  - Location of numberical values inside each bar. Options = Top, centre or bottom of the bar.
+  - Location of numberical values inside each bar. Options = Top, centre or bottom of the bar. (Maybe use FLEXBOX ALIGN-ITEMS)
 
 

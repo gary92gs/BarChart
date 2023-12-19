@@ -1,32 +1,108 @@
+:root {
+  --divCol1: 150px;
+  --divRow1: 50px;
+  --divRow2: 130px;
+  --setMargin: 10px;
+  --setMarginSide: 5px;
+  --setBorderRadius: 5px;
+
+  --clr-banner: #775653;
+  --clr-sb-title: #8a7268;
+  --clr-sb-options: #a1867a;
+  --clr-chart-container: #d0bdbb;
+}
+
+
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
-#header {
-  width: 100%;
-  height: 50px; /* Adjust as needed */
-  background-color: #f1f1f1;
+#banner {
+  display: flex;
   position: fixed;
+  width: 100%;
+  height: var(--divRow1);
   top: 0;
-  left: 0;
-  z-index: 1;
+  left: 0px;
+  margin: var(--setMargin);
+  margin-left: var(--setMarginSide);
+  margin-top: var(--setMarginSide);
+  margin-right: var(--setMarginSide);
+  padding: 0;
+  border-radius: var(--setBorderRadius);
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-banner);
 }
 
 #sidebar {
-  width: 200px; /* Adjust as needed */
-  height: 100%;
-  background-color: #ddd;
+  display: flex;
   position: fixed;
-  top: 50px; /* Same as header height */
-  left: 0;
-  overflow-y: auto;
+  width: var(--divCol1);
+  height: calc(100%- var(--divRow1));
+  top: var(--divRow1);
+  left: 0px;
+  margin: var(--setMargin);
+  margin-left: var(--setMarginSide);
+  padding: 0;
+  border-radius: var(--setBorderRadius);
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-sb-options);
 }
 
+.sb-title {
+  display: flex;
+  position: fixed;
+  width: var(--divCol1);
+  height: calc(var(--divRow2)- var(--divRow1));
+  top: var(--divRow1);
+  left: 0px;
+  margin: var(--setMargin);
+  margin-left: var(--setMarginSide);
+  padding: 0;
+  border-radius: var(--setBorderRadius);
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-sb-title);
+}
+
+.sb-options {
+  display: flex;
+  position: fixed;
+  width: var(--divCol1);
+  height: calc(100% - var(--divRow2));
+  top: var(--divRow2);
+  left: 0px;
+  margin: var(--setMargin);
+  margin-left: var(--setMarginSide);
+  padding: 0;
+  border-radius: var(--setBorderRadius);
+  justify-content: left;
+  align-items: center;
+  background-color: var(--clr-sb-options);
+}
+
+
+
 #chart-container {
-  margin-left: 200px; /* Same as sidebar width */
-  margin-top: 50px; /* Same as header height */
-  padding: 20px;
-  height: calc(100% - 50px); /* Adjust based on header height */
+  display: flex;
+  position: fixed;
+  width: calc(100% - var(--divCol1));
+  height: calc(100% - var(--divRow1));
+  top: var(--divRow1);
+  left: var(--divCol1);
+  margin: var(--setMargin);
+  margin-right: calc(100% - var(--setMarginSide));
+  padding: 0;
+  border-radius: var(--setBorderRadius);
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-chart-container);
+}
+
+h1, h2, li {
+  color:rgb(100, 251, 0);
 }
