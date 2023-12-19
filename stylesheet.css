@@ -1,36 +1,32 @@
 :root {
-  --divCol1: 150px;
-  --divRow1: 50px;
-  --divRow2: 130px;
+  --bannerHeight: 100px;
+  --sidebarWidth: 150px;
   --setMargin: 10px;
-  --setMarginSide: 5px;
-  --setBorderRadius: 5px;
-
-  --clr-banner: #775653;
-  --clr-sb-title: #8a7268;
-  --clr-sb-options: #a1867a;
-  --clr-chart-container: #d0bdbb;
+  --setBorderRadius: 10px;
+  --clr-banner: #ffffffd6;
+  --clr-sidebar: #ffffffd6;
+  --clr-sb-title: #ffffff00;
+  --clr-sb-options: #ffffff00;
+  --clr-chart-container: #ffffffd6;
 }
 
-
 body, html {
+  display: flex;
   margin: 0;
   padding: 0;
   height: 100%;
+  background-color: rgba(111, 239, 197, 0.614);
+  background
 }
 
-#banner {
+  #banner {
   display: flex;
   position: fixed;
-  width: 100%;
-  height: var(--divRow1);
-  top: 0;
+  top: 0px;
   left: 0px;
+  right: 0px;
+  bottom: calc(100% - var(--bannerHeight) - var(--setMargin));
   margin: var(--setMargin);
-  margin-left: var(--setMarginSide);
-  margin-top: var(--setMarginSide);
-  margin-right: var(--setMarginSide);
-  padding: 0;
   border-radius: var(--setBorderRadius);
   justify-content: center;
   align-items: center;
@@ -40,29 +36,24 @@ body, html {
 #sidebar {
   display: flex;
   position: fixed;
-  width: var(--divCol1);
-  height: calc(100%- var(--divRow1));
-  top: var(--divRow1);
   left: 0px;
+  width: calc(150px - var(--setMargin));
+  top: calc(var(--setMargin) + var(--bannerHeight));
+  bottom: 0px;
   margin: var(--setMargin);
-  margin-left: var(--setMarginSide);
-  padding: 0;
   border-radius: var(--setBorderRadius);
   justify-content: center;
   align-items: center;
-  background-color: var(--clr-sb-options);
+  background-color: var(--clr-sidebar);
 }
 
 .sb-title {
   display: flex;
-  position: fixed;
-  width: var(--divCol1);
-  height: calc(var(--divRow2)- var(--divRow1));
-  top: var(--divRow1);
-  left: 0px;
-  margin: var(--setMargin);
-  margin-left: var(--setMarginSide);
-  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100px;
   border-radius: var(--setBorderRadius);
   justify-content: center;
   align-items: center;
@@ -71,16 +62,13 @@ body, html {
 
 .sb-options {
   display: flex;
-  position: fixed;
-  width: var(--divCol1);
-  height: calc(100% - var(--divRow2));
-  top: var(--divRow2);
-  left: 0px;
-  margin: var(--setMargin);
-  margin-left: var(--setMarginSide);
-  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  height: 100%;
   border-radius: var(--setBorderRadius);
-  justify-content: left;
+  justify-items: center;
   align-items: center;
   background-color: var(--clr-sb-options);
 }
@@ -90,13 +78,11 @@ body, html {
 #chart-container {
   display: flex;
   position: fixed;
-  width: calc(100% - var(--divCol1));
-  height: calc(100% - var(--divRow1));
-  top: var(--divRow1);
-  left: var(--divCol1);
+  left: calc(150px + var(--setMargin));
+  top: calc(var(--bannerHeight) + var(--setMargin));
+  right: 0px;
+  bottom: 0px;
   margin: var(--setMargin);
-  margin-right: calc(100% - var(--setMarginSide));
-  padding: 0;
   border-radius: var(--setBorderRadius);
   justify-content: center;
   align-items: center;
@@ -104,5 +90,5 @@ body, html {
 }
 
 h1, h2, li {
-  color:rgb(100, 251, 0);
+  color:rgb(49, 14, 14);
 }
