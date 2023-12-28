@@ -1,44 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <title>Bar Chart</title>
+  <link rel = "stylesheet" type = "text/css" href = "stylesheet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Permanent+Marker&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
 
-  <head>
-    <title>Bar Chart</title>
-    <link rel = "stylesheet" type = "text/css" href = "stylesheet.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  </head>
-
-  <body>
-    <div id = "banner">
-      <h1>BANNER</h1>
-    </div>
-
-
-    <div id = "sidebar">
-      <div class = "sb-title">
-        <h2>SIDEBAR</h2>
+<body>
+  <div class="page-container">
+    <aside class="menu">
+      <h2 class="dataset-title">Select Data</h2>
+      <div class="dataset-options">
+        <button>Data Set1</button>
+        <button>Data Set2</button>
+        <button>Data Set3</button>
+        <button>Data Set4</button>
+        <button>Data Set5</button>
       </div>
-
-      <div class = "sb-options">
-        <ul>
-          <li>Option 1</li>
-          <li>Option 2</li>
-          <li>Option 3</li>
-          <li>Option 4</li>
-        </ul>
+      <h2 class="chart-options-title">Chart Options</h2>
+      <div class="chart-options">
+        <button>Option 1</button>
+        <button>Option 2</button>
+        <button>Option 3</button>
+        <button>Option 4</button>
+        <button>Option 5</button>
       </div>
+    </aside>
 
+    <div class="content">
+      <h1 class="chart-title">Chart Title</h1>
+      <div class="chart-container">
+        <div class="chart"></div>
+        <div class="y-axis-title">
+          <h3>AMOUNT</h3>
+        </div>
+        <div class="y-axis-numbers">
+          <p>10</p>
+          <p>9</p>
+          <p>8</p>
+          <p>7</p>
+          <p>6</p>
+          <p>5</p>
+          <p>4</p>
+          <p>3</p>
+          <p>2</p>
+          <p>1</p>
+        </div>
+        <div class="axis-corner">
+          <p>0</p>
+        </div>
+        <div class="x-axis-title">
+          <h3>ITEM</h3>
+        </div>
+        <div class="x-axis-numbers">
+          <p>1</p>
+          <p>2</p>
+          <p>3</p>
+          <p>4</p>
+          <p>5</p>
+          <p>6</p>
+          <p>7</p>
+          <p>8</p>
+          <p>9</p>
+          <p>10</p>
+        </div>
+      </div>
+      <div class="chart-legend">
+        <h3>CHART LEGEND</h3>
+      </div>
     </div>
+  </div>
 
-
-
-
-    <div id = "chart-container" >
-      <h2>CHART CONTAINER</h2>
-
-    </div>
-
-    <script src="main.js"></script>
-
-  </body>
-
+</body>
 </html>
