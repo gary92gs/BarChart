@@ -70,12 +70,18 @@ font-family: 'Shadows Into Light', cursive; */
   display: flex;
   flex-direction: row;
 }
-.chart > {
+.chart > * {
   display: flex;
   flex-direction: column;
-  place-self: center;
-  margin-inline: 1%;
+  justify-content: flex-end;
 }
+.y-axis {
+  border-right: 0.05rem solid black;
+}
+.x-axis {
+  border-top: 0.05rem solid black;
+}
+
 
 
 
