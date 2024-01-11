@@ -5,22 +5,23 @@ $(document).ready(function () { // this function ensures all javascript will run
   let dataSet3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   let dataSet4 = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
   let dataSet5 = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
-  let dataSet6 = [1523, 2334, 11021, 1750, 1388, 1334];
+  let dataSet6 = [1523, 2334, 1500, 1750, 1388, 1334];
 
   let loadNewDataSet = (dataSet) => {
 
     //clear x-axis-numbers of <p> element. Note: probably need to clear y-axis-numbers and chart as well. Although, this command may interfere with stacking bar values.
-    $('.chart').empty();
 
+    $('.chart').empty();
     //set useful variables
     let columnWidth = 100 / (dataSet.length +1);
     let rowHeight = 100 / 11;
     let barHeight = 100 * 10 / 11;
     //calculate useful variables
     let maxVal = Math.max(...dataSet).toString();
-    let rVal = ((Number((Number(maxVal[0]) + 1).toString() + maxVal.slice(1)) > (Number(maxVal) * 1.25)) ? (Number(maxVal[0]) + 1).toString() + maxVal.slice(1) : maxVal[0] + '5' + maxVal.slice(2))
-    alert(rVal);
-    let rDigits1 = ((Number(maxVal.slice(1,2)) >= 5) ? (Number(maxVal.slice(0,1)) + 1).toString() + '0' : maxVal.slice(0,1) + '5')
+    //alert(Math.floor((maxVal[0] + '.' + maxVal[1])* 1.33));
+
+   // let rVal = Math.ceil((maxVal[0] + '.' + maxVal[1])* 1.25).toString() + '0'.repeat(maxVal.length - 1);
+    let rDigits = ((Number(maxVal.slice(1,2)) >= 5) ? (Number(maxVal.slice(0,1)) + 1).toString() + '0' : maxVal.slice(0,1) + '5')
     let yMax = Number(rDigits.toString() + '0'.repeat(maxVal.slice(2).length));
     //'...' prefix allows function to process dataset as a NUMBER instead of an OBJECT (note: using this for setting height)
 
@@ -65,7 +66,7 @@ $(document).ready(function () { // this function ensures all javascript will run
 
 
 
-  loadNewDataSet(dataSet6);
+  loadNewDataSet(dataSet4);
 
 }); //do not put any code below this point, or it may run before the document is ready
 
